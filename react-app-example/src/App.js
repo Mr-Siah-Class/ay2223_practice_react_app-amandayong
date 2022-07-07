@@ -17,6 +17,12 @@ import NoScreen from './screens/404Screen';
 import FooterBar from './components/FooterBar';
 import SingleProductScreen from './screens/SingleProductScreen';
 
+// Passing URL Parameter to Single product sceernen
+const ProductIdWrapper = () => {
+  const { productId } = useParams();
+  return <SingleProductScreen productId={productId} />;
+};
+
 class App extends React.Component
 {
     constructor() {
@@ -33,7 +39,7 @@ class App extends React.Component
                   <Routes>
                     <Route exact path="/" element={<HomeScreen/>}/>
                     <Route path="/products" element={<ProductsScreen/>}/>
-                    <Route path="/products/:productId" element={<SingleProductScreen/>}/>}/>
+                    <Route path="/products/:productId" element={<ProductIdWrapper/>}/>
                     <Route path="*" element={<NoScreen/>}/>
                   </Routes>
                 </BrowserRouter>
