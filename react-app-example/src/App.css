@@ -1,7 +1,7 @@
 #Nav, #Footer
 {
   display: flex;
-  background-color: palevioletred;
+  background-color: rgb(255, 225, 235);
 }
 
 #Footer p
